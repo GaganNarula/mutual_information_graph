@@ -1,20 +1,15 @@
+Here we'll use mutual information to compute correlations between different variables measured by a survey. The focus of the survey is on disability in a humanitarian context. 
+In this case, the dataset is a survey on Syrian refugees living in camps in Jordan and Lebanon. You can read the report (on the Jordan subset of the data) [here](https://reliefweb.int/report/jordan/removing-barriers-path-towards-inclusive-access-disability-assessment-among-syrian)
+
 ```python
 from mutual_information import *
 %load_ext autoreload
 %autoreload 2
 ```
 
-
-```python
-pd.options.display.max_columns = 100
-```
-
 # let's load some data
 
-In this case, the dataset is a survey on Syrian refugees living in camps in Jordan and Lebanon. You can read the report (on the Jordan subset of the data) [here](https://reliefweb.int/report/jordan/removing-barriers-path-towards-inclusive-access-disability-assessment-among-syrian)
-
 For now, we are going to analyze the correlations between the variables (questions) measured in the survey only for adults.
-
 
 ```python
 data = pd.read_csv('./Data/data_adult.csv')
@@ -38,13 +33,6 @@ data.head(3)
         vertical-align: middle;
     }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
 </style>
 <table border="1" class="dataframe">
   <thead>
